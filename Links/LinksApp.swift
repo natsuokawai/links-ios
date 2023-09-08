@@ -11,7 +11,7 @@ import SwiftUI
 struct LinksApp: App {
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            LinksView()
         }
     }
 }
