@@ -8,19 +8,27 @@
 import SwiftUI
 
 struct LinksView: View {
+    var links: [Link]
+
     var body: some View {
-        VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundColor(.accentColor)
-            Text("Hello, world!")
+        NavigationStack {
+            List {
+                ForEach(links) { link in
+                    NavigationLink(link.title, destination: Text(link.title))
+                }
+            }
+            .navigationTitle("Links")
+            .toolbar {
+                Button(action: {}) {
+                    Image(systemName: "plus")
+                }
+            }
         }
-        .padding()
     }
 }
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
-        LinksView()
+        LinksView(links: Link.sampleData)
     }
 }
