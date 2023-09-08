@@ -12,13 +12,23 @@ struct LinkDetailView: View {
     @Environment(\.openURL) private var openURL
 
     var body: some View {
-        List {
-            Section(header: Text("Title")) {
-                Text(link.title)
-            }
-            Section(header: Text("URL")) {
-                Button(link.url.absoluteString) {
-                    openURL(link.url)
+        VStack(alignment: .center) {
+            List {
+                Section(header: Text("Title")) {
+                    Text(link.title)
+                }
+                Section(header: Text("URL")) {
+                    Button(link.url.absoluteString) {
+                        openURL(link.url)
+                    }
+                }
+                Section(header: Text("QR Code")) {
+                    HStack {
+                        Spacer()
+                        QRCodeView(string: link.url.absoluteString)
+                        Spacer()
+                    }
+                    .padding([.top, .bottom])
                 }
             }
         }
