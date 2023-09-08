@@ -9,8 +9,19 @@ import Foundation
 
 struct Link: Identifiable {
     let id: UUID
-    let title: String
-    let url: URL
+    var title: String
+    var url: URL
+
+    var urlString: String {
+        get {
+            url.absoluteString
+        }
+        set {
+            if let newURL = URL(string: newValue) {
+                url = newURL
+            }
+        }
+    }
     
     init(id: UUID = UUID(), title: String, url: URL) {
         self.id = id

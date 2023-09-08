@@ -8,28 +8,23 @@
 import SwiftUI
 
 struct LinkDetailView: View {
-    let link: Link
-    @Environment(\.openURL) private var openURL
+    @Binding var link: Link
 
     var body: some View {
-        VStack(alignment: .center) {
-            List {
-                Section(header: Text("Title")) {
-                    Text(link.title)
+        List {
+            Section(header: Text("Title")) {
+                TextField("Title", text: $link.title)
+            }
+            Section(header: Text("URL")) {
+                TextField("URL", text: $link.urlString)
+            }
+            Section(header: Text("QR Code")) {
+                HStack {
+                    Spacer()
+                    QRCodeView(string: link.urlString)
+                    Spacer()
                 }
-                Section(header: Text("URL")) {
-                    Button(link.url.absoluteString) {
-                        openURL(link.url)
-                    }
-                }
-                Section(header: Text("QR Code")) {
-                    HStack {
-                        Spacer()
-                        QRCodeView(string: link.url.absoluteString)
-                        Spacer()
-                    }
-                    .padding([.top, .bottom])
-                }
+                .padding([.top, .bottom])
             }
         }
         .navigationBarTitle("", displayMode: .inline)
@@ -39,7 +34,7 @@ struct LinkDetailView: View {
 struct LinkDetailView_Previews: PreviewProvider {
     static var previews: some View {
         NavigationStack {
-            LinkDetailView(link: Link.sampleData[0])
+            LinkDetailView(link: .constant(Link.sampleData[0]))
         }
     }
 }

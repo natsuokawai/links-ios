@@ -9,9 +9,11 @@ import SwiftUI
 
 @main
 struct LinksApp: App {
+    @State private var links = Link.sampleData
+
     var body: some Scene {
         WindowGroup {
-            LinksView(links: [])
+            LinksView(links: $links)
         }
     }
 }

@@ -8,13 +8,13 @@
 import SwiftUI
 
 struct LinksView: View {
-    var links: [Link]
+    @Binding var links: [Link]
 
     var body: some View {
         NavigationStack {
             List {
-                ForEach(links) { link in
-                    NavigationLink(link.title, destination: LinkDetailView(link: link))
+                ForEach($links) { $link in
+                    NavigationLink(link.title, destination: LinkDetailView(link: $link))
                 }
             }
             .navigationTitle("Links")
@@ -29,6 +29,6 @@ struct LinksView: View {
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
-        LinksView(links: Link.sampleData)
+        LinksView(links: .constant(Link.sampleData))
     }
 }
