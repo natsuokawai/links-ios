@@ -22,6 +22,7 @@ struct LinkDetailView: View {
                 }
             }
         }
+        .navigationBarTitle("", displayMode: .inline)
     }
 }
 
