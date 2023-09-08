@@ -9,6 +9,7 @@ import SwiftUI
 
 struct LinksView: View {
     @Binding var links: [Link]
+    @State var isPresentingNewLinkSheet = false
 
     var body: some View {
         NavigationStack {
@@ -19,10 +20,19 @@ struct LinksView: View {
             }
             .navigationTitle("Links")
             .toolbar {
-                Button(action: {}) {
-                    Image(systemName: "plus")
+                ToolbarItemGroup(placement: .bottomBar) {
+                    Button(action: {
+                        isPresentingNewLinkSheet = true
+                    }) {
+                        Image(systemName: "plus.circle.fill")
+                        Text("New Link")
+                    }
+                    Spacer()
                 }
             }
+        }
+        .sheet(isPresented: $isPresentingNewLinkSheet) {
+            NewLinkSheet(links: $links, isPresentingNewLinkSheet: $isPresentingNewLinkSheet)
         }
     }
 }

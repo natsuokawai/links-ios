@@ -18,6 +18,7 @@
 		A16628D92AAB117F00434C92 /* LinkEditlView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A16628D82AAB117F00434C92 /* LinkEditlView.swift */; };
 		A16628DC2AAB1D7900434C92 /* QRCodeUtilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = A16628DB2AAB1D7900434C92 /* QRCodeUtilities.swift */; };
 		A16628DE2AAB276A00434C92 /* QRCodeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A16628DD2AAB276A00434C92 /* QRCodeView.swift */; };
+		A16628E42AAB4B7900434C92 /* NewLinkSheet.swift in Sources */ = {isa = PBXBuildFile; fileRef = A16628E32AAB4B7900434C92 /* NewLinkSheet.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -52,6 +53,7 @@
 		A16628D82AAB117F00434C92 /* LinkEditlView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LinkEditlView.swift; sourceTree = "<group>"; };
 		A16628DB2AAB1D7900434C92 /* QRCodeUtilities.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QRCodeUtilities.swift; sourceTree = "<group>"; };
 		A16628DD2AAB276A00434C92 /* QRCodeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QRCodeView.swift; sourceTree = "<group>"; };
+		A16628E32AAB4B7900434C92 /* NewLinkSheet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewLinkSheet.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -143,6 +145,7 @@
 				A16628AC2AAADFAE00434C92 /* LinksView.swift */,
 				A16628D82AAB117F00434C92 /* LinkEditlView.swift */,
 				A16628DD2AAB276A00434C92 /* QRCodeView.swift */,
+				A16628E32AAB4B7900434C92 /* NewLinkSheet.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -298,6 +301,7 @@
 				A16628DC2AAB1D7900434C92 /* QRCodeUtilities.swift in Sources */,
 				A16628AD2AAADFAE00434C92 /* LinksView.swift in Sources */,
 				A16628AB2AAADFAE00434C92 /* LinksApp.swift in Sources */,
+				A16628E42AAB4B7900434C92 /* NewLinkSheet.swift in Sources */,
 				A16628D92AAB117F00434C92 /* LinkEditlView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -11,7 +11,7 @@ struct Link: Identifiable {
     let id: UUID
     var title: String
     var url: URL
-
+    
     var urlString: String {
         get {
             url.absoluteString
