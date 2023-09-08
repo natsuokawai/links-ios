@@ -14,7 +14,7 @@ struct LinksView: View {
         NavigationStack {
             List {
                 ForEach($links) { $link in
-                    NavigationLink(link.title, destination: LinkDetailView(link: $link))
+                    NavigationLink(link.title, destination: LinkEditlView(link: $link))
                 }
             }
             .navigationTitle("Links")
