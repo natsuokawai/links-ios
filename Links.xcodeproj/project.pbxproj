@@ -19,6 +19,7 @@
 		A16628DC2AAB1D7900434C92 /* QRCodeUtilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = A16628DB2AAB1D7900434C92 /* QRCodeUtilities.swift */; };
 		A16628DE2AAB276A00434C92 /* QRCodeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A16628DD2AAB276A00434C92 /* QRCodeView.swift */; };
 		A16628E42AAB4B7900434C92 /* NewLinkSheet.swift in Sources */ = {isa = PBXBuildFile; fileRef = A16628E32AAB4B7900434C92 /* NewLinkSheet.swift */; };
+		A16628E62AAB614000434C92 /* LinkStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = A16628E52AAB614000434C92 /* LinkStore.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -54,6 +55,7 @@
 		A16628DB2AAB1D7900434C92 /* QRCodeUtilities.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QRCodeUtilities.swift; sourceTree = "<group>"; };
 		A16628DD2AAB276A00434C92 /* QRCodeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QRCodeView.swift; sourceTree = "<group>"; };
 		A16628E32AAB4B7900434C92 /* NewLinkSheet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewLinkSheet.swift; sourceTree = "<group>"; };
+		A16628E52AAB614000434C92 /* LinkStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LinkStore.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -105,8 +107,8 @@
 			isa = PBXGroup;
 			children = (
 				A16628AA2AAADFAE00434C92 /* LinksApp.swift */,
-				A16628D42AAADFCF00434C92 /* Views */,
 				A16628D52AAAE9CD00434C92 /* Models */,
+				A16628D42AAADFCF00434C92 /* Views */,
 				A16628DA2AAB1CF500434C92 /* Utilities */,
 				A16628AE2AAADFAF00434C92 /* Assets.xcassets */,
 				A16628B02AAADFAF00434C92 /* Preview Content */,
@@ -154,6 +156,7 @@
 			isa = PBXGroup;
 			children = (
 				A16628D62AAAEA4D00434C92 /* Link.swift */,
+				A16628E52AAB614000434C92 /* LinkStore.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -301,6 +304,7 @@
 				A16628DC2AAB1D7900434C92 /* QRCodeUtilities.swift in Sources */,
 				A16628AD2AAADFAE00434C92 /* LinksView.swift in Sources */,
 				A16628AB2AAADFAE00434C92 /* LinksApp.swift in Sources */,
+				A16628E62AAB614000434C92 /* LinkStore.swift in Sources */,
 				A16628E42AAB4B7900434C92 /* NewLinkSheet.swift in Sources */,
 				A16628D92AAB117F00434C92 /* LinkEditlView.swift in Sources */,
 			);

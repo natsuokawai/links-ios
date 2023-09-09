@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct Link: Identifiable {
+struct Link: Identifiable, Codable {
     let id: UUID
     var title: String
     var url: URL

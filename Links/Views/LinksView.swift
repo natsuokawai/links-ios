@@ -10,6 +10,8 @@ import SwiftUI
 struct LinksView: View {
     @Binding var links: [Link]
     @State var isPresentingNewLinkSheet = false
+    @Environment(\.scenePhase) private var scenePhase
+    let saveAction: ()->Void
 
     var body: some View {
         NavigationStack {
@@ -34,11 +36,14 @@ struct LinksView: View {
         .sheet(isPresented: $isPresentingNewLinkSheet) {
             NewLinkSheet(links: $links, isPresentingNewLinkSheet: $isPresentingNewLinkSheet)
         }
+        .onChange(of: scenePhase) { phase in
+            if phase == .inactive { saveAction() }
+        }
     }
 }
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
-        LinksView(links: .constant(Link.sampleData))
+        LinksView(links: .constant(Link.sampleData)) {}
     }
 }
